@@ -1,15 +1,19 @@
 {
   "name": "merohms",
   "private": true,
+  "author": {
+    "name": "Yogendra Rana",
+    "email": "yogendrarana.mail@gmail.com"
+  },
   "scripts": {
     "build": "turbo build",
-    "dev": "turbo dev",
+    "dev": "turbo run dev --scope=\"@merohms/web\"", 
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*",
+    "@merohms/eslint-config": "*",
+    "@merohms/typescript-config": "*",
     "prettier": "^3.2.5",
     "turbo": "latest"
   },
