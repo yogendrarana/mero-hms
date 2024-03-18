@@ -3,7 +3,8 @@
   "private": true,
   "author": {
     "name": "Yogendra Rana",
-    "email": "yogendrarana.mail@gmail.com"
+    "email": "yogendrarana.mail@gmail.com",
+    "website": "www.yogendrarana.com.np"
   },
   "scripts": {
     "build": "turbo build",
@@ -12,6 +13,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "@merohms/config": "*",
     "@merohms/eslint-config": "*",
     "@merohms/typescript-config": "*",
     "prettier": "^3.2.5",

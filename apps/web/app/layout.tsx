@@ -1,9 +1,13 @@
-import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
+// css
+import "../styles/globals.css";
+
+// font
 const inter = Inter({ subsets: ["latin"] });
 
+// metadata
 export const metadata: Metadata = {
   title: "Mero HMS",
   description: "Mero HMS hotel management system.",
