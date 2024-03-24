@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
 // css
-import "../styles/globals.css";
+import "@merohms/config/css/globals.css";
 
 // font
 const inter = Inter({ subsets: ["latin"] });
