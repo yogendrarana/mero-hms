@@ -1,1 +1,1 @@
-export { default as Tooltip } from './components/tooltip/tooltip';
+export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from './components/tooltip/tooltip';

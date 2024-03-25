@@ -6,25 +6,24 @@
     "email": "yogendrarana.mail@gmail.com",
     "website": "www.yogendrarana.com.np"
   },
+  "packageManager": "yarn@1.22.22",
+  "engines": {
+    "node": ">=18"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "build": "turbo build",
-    "dev": "turbo run dev --scope=\"@merohms/web\" --scope=\"@merohms/hms\"", 
+    "dev": "turbo run dev --scope=\"@merohms/web\" --scope=\"@merohms/hms\"",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "@merohms/styles": "*",
     "@merohms/eslint-config": "*",
     "@merohms/typescript-config": "*",
     "prettier": "^3.2.5",
     "turbo": "latest"
-  },
-  "engines": {
-    "node": ">=18"
-  },
-  "packageManager": "yarn@1.22.22",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+  }
 }
