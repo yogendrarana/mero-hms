@@ -19,3 +19,9 @@ input {
 input:focus{
     outline: none;
 }
+
+:root {
+    /* width */
+    --w-nav: 50px;
+    --w-sub-nav: 250px;
+}

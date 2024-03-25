@@ -17,7 +17,6 @@
   "devDependencies": {
     "@merohms/eslint-config": "*",
     "@merohms/typescript-config": "*",
-    "@merohms/config": "*",
     "@next/eslint-plugin-next": "^14.1.1",
     "@types/eslint": "^8.56.5",
     "@types/node": "^20.11.24",

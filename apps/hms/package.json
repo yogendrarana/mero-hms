@@ -16,7 +16,7 @@
     "react-dom": "^18"
   },
   "devDependencies": {
-    "@merohms/config": "*",
+    "@merohms/styles": "*",
     "@merohms/eslint-config": "*",
     "@merohms/typescript-config": "*",
     "@types/node": "^20",

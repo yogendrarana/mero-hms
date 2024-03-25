@@ -2,9 +2,18 @@
 
 import { useState } from 'react'
 import { Eye, EyeOff } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
 const LoginForm = () => {
+    const router = useRouter();
+
+    // local states
     const [showPassword, setShowPassword] = useState(false);
+
+    // handle submit
+    function handleSubmit() {
+        router.push('/dashboard');
+    }
 
     return (
         <form className='px-10 py-12 flex flex-col gap-4 border bg-white rounded-lg shadow-md'>
@@ -25,7 +34,7 @@ const LoginForm = () => {
                     }
                 </button>
             </label>
-            <button type="button" className='w-full px-4 py-2 rounded-lg bg-black text-white'>Submit</button>
+            <button onClick={handleSubmit} type="button" className='w-full mt-1 px-4 py-2 rounded-lg bg-black text-white'>Submit</button>
         </form>
     )
 }

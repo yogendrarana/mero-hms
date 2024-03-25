@@ -13,7 +13,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "@merohms/config": "*",
+    "@merohms/styles": "*",
     "@merohms/eslint-config": "*",
     "@merohms/typescript-config": "*",
     "prettier": "^3.2.5",
