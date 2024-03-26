@@ -12,7 +12,7 @@ const LoginForm = () => {
 
     // handle submit
     function handleSubmit() {
-        router.push('/dashboard');
+        router.push('/analytics');
     }
 
     return (
