@@ -1,7 +1,7 @@
 "use client"
 
-import React, { useState } from 'react'
-import { useRouter } from 'next/navigation';
+import React, { useEffect, useState } from 'react'
+import { usePathname, useRouter } from 'next/navigation';
 
 // icons
 import { User } from 'lucide-react';
@@ -14,24 +14,26 @@ import { Tooltip, TooltipProvider, TooltipTrigger, TooltipContent } from '@meroh
 import { SidebarNavItem } from '../../types/sidebar';
 
 const SidebarNav = () => {
-    const router = useRouter()
-    const [activeSubMenu, setActiveSubMenu] = useState(appLinks.dashboardLinks[0]?.items);
+    const router = useRouter();
+    const pathname = usePathname();
+    const [activeMenu, setActiveMenu] = useState(null as SidebarNavItem | null);
 
 
-    // handleMenuClick
-    function handleMenuClick(menu: SidebarNavItem) {
-        router.push(menu.href)
-        setActiveSubMenu(menu.items)
-    }
+    useEffect(() => {
+        const menu = appLinks.dashboardLinks.find(menu => menu.href === pathname);
+        if (menu) {
+            setActiveMenu(menu);
+        }
+    }, [pathname])
 
     return (
         <div className='h-full flex'>
             <div className='h-full overflow-hidden border-r'>
                 {
-                    appLinks.dashboardLinks.map((link, i) => (
+                    appLinks.dashboardLinks.map((menu, i) => (
                         <div
                             key={i}
-                            onClick={() => handleMenuClick(link)}
+                            onClick={() => router.push(menu.href)}
                             className='h-[75px] w-[75px] grid place-items-center cursor-pointer'
                         >
                             <TooltipProvider delayDuration={100}>
@@ -40,7 +42,7 @@ const SidebarNav = () => {
                                         <User size={18} />
                                     </TooltipTrigger>
                                     <TooltipContent side='right'>
-                                        <p>{link.title}</p>
+                                        <p>{menu.title}</p>
                                     </TooltipContent>
                                 </Tooltip>
                             </TooltipProvider>
@@ -51,8 +53,8 @@ const SidebarNav = () => {
 
             <div className='w-[250px] border-r'>
                 {
-                    activeSubMenu && activeSubMenu.map((subMnu, i) => (
-                        <div key={i}>{subMnu.title}</div>
+                    activeMenu && activeMenu.items && activeMenu.items.map((subMenu, i) => (
+                        <div key={i}>{subMenu.title}</div>
                     ))
                 }
             </div>

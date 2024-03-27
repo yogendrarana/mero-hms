@@ -13,11 +13,12 @@
     "lucide-react": "^0.363.0",
     "next": "14.1.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
-    "@merohms/styles": "*",
     "@merohms/eslint-config": "*",
+    "@merohms/styles": "*",
     "@merohms/typescript-config": "*",
     "@types/node": "^20",
     "@types/react": "^18",
