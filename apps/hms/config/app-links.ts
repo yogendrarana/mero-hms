@@ -8,14 +8,13 @@ export const appLinks: IAppLinks = {
     dashboardLinks: [
         {
             title: "Analytics",
-            href: "/analytics",
+            href: "/analytics/revenue",
             items: [
                 { title: "Revenue Analysis", href: "/analytics/revenue" },
                 { title: "Occupancy Rate", href: "/analytics/occupancy" },
                 { title: "Sales Performance", href: "/analytics/sales" },
                 { title: "Rate Management", href: "/analytics/rate" },
                 { title: "Room Utilization", href: "/analytics/room" },
-                { title: "Employee Productivity", href: "/analytics/employee" }
             ]
         },
         {

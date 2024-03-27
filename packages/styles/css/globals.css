@@ -22,6 +22,6 @@ input:focus{
 
 :root {
     /* width */
-    --w-nav: 50px;
-    --w-sub-nav: 250px;
+    --w-main-menu: 80px;
+    --w-sub-menu: 300px;
 }
