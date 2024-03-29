@@ -8,6 +8,7 @@ export const appLinks: IAppLinks = {
     dashboardLinks: [
         {
             title: "Analytics",
+            root_href: "analytics",
             href: "/analytics/revenue",
             items: [
                 { title: "Revenue Analysis", href: "/analytics/revenue" },
@@ -19,6 +20,7 @@ export const appLinks: IAppLinks = {
         },
         {
             title: "Front Office",
+            root_href: "fo",
             href: "/fo",
             items: [
                 { title: "Reservation", href: "/fo/reservation" },
@@ -29,6 +31,7 @@ export const appLinks: IAppLinks = {
         },
         {
             title: "Point of Sale",
+            root_href: "pos",
             href: "/pos",
             items: [
                 { title: "Restaurant Orders", href: "/pos/order" },
@@ -38,6 +41,7 @@ export const appLinks: IAppLinks = {
         },
         {
             title: "House Keeping",
+            root_href: "hk",
             href: "/hk",
             items: [
                 { title: "Room Status", href: "/hk/room-status" },
@@ -48,6 +52,7 @@ export const appLinks: IAppLinks = {
         },
         {
             title: "Inventory",
+            root_href: "inventory",
             href: "/inventory",
             items: [
                 { title: "Stock", href: "/inventory/stock" },

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { usePathname, useRouter } from 'next/navigation';
 
 // icons
-import { User } from 'lucide-react';
+import { ChevronRight, User } from 'lucide-react';
 
 // links
 import { appLinks } from '../../config/app-links';
@@ -16,10 +16,13 @@ import { SidebarNavItem } from '../../types/sidebar';
 const SidebarNav = () => {
     const router = useRouter();
     const pathname = usePathname();
-    const [activeMenu, setActiveMenu] = useState(null as SidebarNavItem | null);
+    const [activeMenu, setActiveMenu] = useState<SidebarNavItem | null>(null);
+
+    // const root href
 
     useEffect(() => {
-        const menu = appLinks.dashboardLinks.find(menu => menu.href === pathname);
+        const root_href = pathname.split("/")[1] as string;
+        const menu = appLinks.dashboardLinks.find(menu => menu.href.includes(root_href));
         if (menu) {
             setActiveMenu(menu);
         }
@@ -35,8 +38,9 @@ const SidebarNav = () => {
                             key={i}
                             onClick={() => router.push(menu.href)}
                             className={`
+                                group
                                 h-[50px] w-[50px] grid place-items-center cursor-pointer rounded-md
-                                ${pathname.includes(menu.href) ? "bg-gray-200" : ""}
+                                ${pathname.split("/")[1] === menu.root_href ? "bg-gray-200" : ""}
                             `}
                         >
                             <TooltipProvider delayDuration={100}>
@@ -44,8 +48,8 @@ const SidebarNav = () => {
                                     <TooltipTrigger asChild>
                                         <User size={18} />
                                     </TooltipTrigger>
-                                    <TooltipContent side='right'>
-                                        <p>{menu.title}</p>
+                                    <TooltipContent side='right' className='group-hover:ml-4 bg-white text-black border shadow-sm'>
+                                        <p className='text-sm'>{menu.title}</p>
                                     </TooltipContent>
                                 </Tooltip>
                             </TooltipProvider>
@@ -61,9 +65,10 @@ const SidebarNav = () => {
                         <div
                             key={i}
                             onClick={() => router.push(subMenu.href)}
-                            className='cursor-pointer'
+                            className='flex justify-between items-center hover:bg-gray-100 p-2 rounded-md duration-300 cursor-pointer'
                         >
-                            {subMenu.title}
+                            <p> {subMenu.title} </p>
+                            { pathname === subMenu.href && <ChevronRight size={18} /> }
                         </div>
                     ))
                 }
