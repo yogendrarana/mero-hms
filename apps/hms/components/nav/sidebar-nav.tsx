@@ -38,14 +38,14 @@ const SidebarNav = () => {
                             key={i}
                             onClick={() => router.push(menu.href)}
                             className={`
-                                group
-                                h-[50px] w-[50px] grid place-items-center cursor-pointer rounded-md
+                                h-[50px] w-[50px] mb-2 grid place-items-center cursor-pointer rounded-md
+                                hover:bg-gray-100 transition duration-300
                                 ${pathname.split("/")[1] === menu.root_href ? "bg-gray-200" : ""}
                             `}
                         >
                             <TooltipProvider delayDuration={100}>
                                 <Tooltip>
-                                    <TooltipTrigger asChild>
+                                    <TooltipTrigger className='h-full w-full grid place-items-center'>
                                         <User size={18} />
                                     </TooltipTrigger>
                                     <TooltipContent side='right' className='group-hover:ml-4 bg-white text-black border shadow-sm'>
@@ -65,10 +65,9 @@ const SidebarNav = () => {
                         <div
                             key={i}
                             onClick={() => router.push(subMenu.href)}
-                            className='flex justify-between items-center hover:bg-gray-100 p-2 rounded-md duration-300 cursor-pointer'
+                            className='flex justify-between items-center hover:underline cursor-pointer duration-300'
                         >
-                            <p> {subMenu.title} </p>
-                            { pathname === subMenu.href && <ChevronRight size={18} /> }
+                            <p className={`${pathname === subMenu.href ? "font-bold" : ""}`}> {subMenu.title} </p>
                         </div>
                     ))
                 }
