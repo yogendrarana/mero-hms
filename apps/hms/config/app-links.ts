@@ -1,3 +1,4 @@
+import { ICONS } from "../assets/icons/icons";
 import { SidebarNavItem } from "../types/sidebar";
 
 interface IAppLinks {
@@ -8,6 +9,7 @@ export const appLinks: IAppLinks = {
     dashboardLinks: [
         {
             title: "Analytics",
+            icon: ICONS.DashboardOutlineIcon,
             root_href: "analytics",
             href: "/analytics/revenue",
             items: [
@@ -20,6 +22,7 @@ export const appLinks: IAppLinks = {
         },
         {
             title: "Front Office",
+            icon: ICONS.FoOutlineIcon,
             root_href: "fo",
             href: "/fo",
             items: [
@@ -31,6 +34,7 @@ export const appLinks: IAppLinks = {
         },
         {
             title: "Point of Sale",
+            icon: ICONS.PosOutlineIcon,
             root_href: "pos",
             href: "/pos",
             items: [
@@ -41,6 +45,7 @@ export const appLinks: IAppLinks = {
         },
         {
             title: "House Keeping",
+            icon: ICONS.HkOutlineIcon,
             root_href: "hk",
             href: "/hk",
             items: [
@@ -52,6 +57,7 @@ export const appLinks: IAppLinks = {
         },
         {
             title: "Inventory",
+            icon: ICONS.InventoryOutlineIcon,
             root_href: "inventory",
             href: "/inventory",
             items: [

@@ -12,13 +12,12 @@ import { appLinks } from '../../config/app-links';
 // componets
 import { Tooltip, TooltipProvider, TooltipTrigger, TooltipContent } from '@merohms/ui';
 import { SidebarNavItem } from '../../types/sidebar';
+import Image from 'next/image';
 
 const SidebarNav = () => {
     const router = useRouter();
     const pathname = usePathname();
     const [activeMenu, setActiveMenu] = useState<SidebarNavItem | null>(null);
-
-    // const root href
 
     useEffect(() => {
         const root_href = pathname.split("/")[1] as string;
@@ -46,7 +45,7 @@ const SidebarNav = () => {
                             <TooltipProvider delayDuration={100}>
                                 <Tooltip>
                                     <TooltipTrigger className='h-full w-full grid place-items-center'>
-                                        <User size={18} />
+                                        <Image src={menu.icon} alt={menu.title} width={20} height={20} />
                                     </TooltipTrigger>
                                     <TooltipContent side='right' className='group-hover:ml-4 bg-white text-black border shadow-sm'>
                                         <p className='text-sm'>{menu.title}</p>
