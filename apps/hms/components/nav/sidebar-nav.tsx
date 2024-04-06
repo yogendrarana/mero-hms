@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 
 // icons
-import { Settings, User } from 'lucide-react';
+import { BedDouble , Settings, User } from 'lucide-react';
 
 // links
 import { appLinks } from '../../config/app-links';
@@ -31,31 +31,37 @@ const SidebarNav = () => {
     return (
         <div className='h-full flex gap-2'>
             {/* main menu */}
-            <div className='h-full p-2 overflow-hidden rounded-lg flex flex-col items-center'>
-                {
-                    appLinks.dashboardLinks.map((menu, i) => (
-                        <div
-                            key={i}
-                            onClick={() => router.push(menu.href)}
-                            className={`
+            <div className='h-full w-[var(--w-main-menu)] px-2 overflow-hidden rounded-lg flex flex-col items-center gap-2'>
+                <div className='size-[calc(var(--w-main-menu)-10px)] text-center py-3 border bg-blue-500 text-white text-sm rounded-lg shadow-md grid place-items-center'>
+                    <BedDouble className='h-5 w-5' />
+                </div>
+
+                <div>
+                    {
+                        appLinks.dashboardLinks.map((menu, i) => (
+                            <div
+                                key={i}
+                                onClick={() => router.push(menu.href)}
+                                className={`
                                     h-[50px] w-[50px] mb-2 grid place-items-center cursor-pointer rounded-md
                                     hover:bg-gray-200 transition duration-300
                                     ${pathname.split("/")[1] === menu.root_href ? "bg-gray-200" : ""}
                                 `}
-                        >
-                            <TooltipProvider delayDuration={100}>
-                                <Tooltip>
-                                    <TooltipTrigger className='h-full w-full grid place-items-center'>
-                                        <Image src={menu.icon} alt={menu.title} width={20} height={20} />
-                                    </TooltipTrigger>
-                                    <TooltipContent side='right' className='group-hover:ml-4 bg-white text-black border shadow-sm'>
-                                        <p className='text-sm'>{menu.title}</p>
-                                    </TooltipContent>
-                                </Tooltip>
-                            </TooltipProvider>
-                        </div>
-                    ))
-                }
+                            >
+                                <TooltipProvider delayDuration={100}>
+                                    <Tooltip>
+                                        <TooltipTrigger className='h-full w-full grid place-items-center'>
+                                            <Image src={menu.icon} alt={menu.title} width={20} height={20} />
+                                        </TooltipTrigger>
+                                        <TooltipContent side='right' className='bg-white text-black border shadow-sm'>
+                                            <p className='text-sm'>{menu.title}</p>
+                                        </TooltipContent>
+                                    </Tooltip>
+                                </TooltipProvider>
+                            </div>
+                        ))
+                    }
+                </div>
 
                 <div className='mt-auto flex flex-col gap-4'>
                     <TooltipProvider delayDuration={100}>
@@ -69,7 +75,7 @@ const SidebarNav = () => {
                                     <span className="sr-only">Account</span>
                                 </Link>
                             </TooltipTrigger>
-                            <TooltipContent className='text-sm bg-white text-black border' side="right">Accout</TooltipContent>
+                            <TooltipContent className='text-sm bg-white text-black border' side="right">Account</TooltipContent>
                         </Tooltip>
                     </TooltipProvider>
 
@@ -96,7 +102,7 @@ const SidebarNav = () => {
                             onClick={() => router.push(subMenu.href)}
                             className='flex justify-between items-center hover:underline cursor-pointer duration-300'
                         >
-                            <p className={`${pathname === subMenu.href ? "font-bold" : ""}`}> {subMenu.title} </p>
+                            <p className={`${pathname === subMenu.href ? "font-bold" : "text-gray-400"}`}> {subMenu.title} </p>
                         </div>
                     ))
                 }
