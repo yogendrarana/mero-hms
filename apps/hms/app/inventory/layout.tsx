@@ -1,19 +1,14 @@
 import { ReactNode } from "react";
-import SidebarNav from "../../components/nav/sidebar-nav";
+
+// components
+import DashboardLayout from "../../components/layout/dashboard-layout";
 
 type PropType = {
     children: ReactNode;
 }
 
-const DashboardLayout = ({ children }: PropType) => {
-    return (
-        <div className="h-full flex">
-            <SidebarNav />
-            <div>
-                {children}
-            </div>
-        </div>
-    )
+const InventoryLayout = ({ children }: PropType) => {
+    return <DashboardLayout>{children}</DashboardLayout>
 }
 
-export default DashboardLayout;
+export default InventoryLayout;

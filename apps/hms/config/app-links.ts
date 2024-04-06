@@ -24,7 +24,7 @@ export const appLinks: IAppLinks = {
             title: "Front Office",
             icon: ICONS.FoOutlineIcon,
             root_href: "fo",
-            href: "/fo",
+            href: "/fo/reservation",
             items: [
                 { title: "Reservation", href: "/fo/reservation" },
                 { title: "Check In", href: "/fo/check-in" },
@@ -36,7 +36,7 @@ export const appLinks: IAppLinks = {
             title: "Point of Sale",
             icon: ICONS.PosOutlineIcon,
             root_href: "pos",
-            href: "/pos",
+            href: "/pos/order",
             items: [
                 { title: "Restaurant Orders", href: "/pos/order" },
                 { title: "Table Management", href: "/pos/table" },
@@ -47,7 +47,7 @@ export const appLinks: IAppLinks = {
             title: "House Keeping",
             icon: ICONS.HkOutlineIcon,
             root_href: "hk",
-            href: "/hk",
+            href: "/hk/room-status",
             items: [
                 { title: "Room Status", href: "/hk/room-status" },
                 { title: "Room Assignment", href: "/hk/room-assignment" },
@@ -59,7 +59,7 @@ export const appLinks: IAppLinks = {
             title: "Inventory",
             icon: ICONS.InventoryOutlineIcon,
             root_href: "inventory",
-            href: "/inventory",
+            href: "/inventory/stock",
             items: [
                 { title: "Stock", href: "/inventory/stock" },
                 { title: "Purchase", href: "/inventory/purchase" },
