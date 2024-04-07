@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 
 // icons
-import { BedDouble , Settings, User } from 'lucide-react';
+import { BedDouble, Settings, User } from 'lucide-react';
 
 // links
 import { appLinks } from '../../config/app-links';
@@ -32,7 +32,7 @@ const SidebarNav = () => {
         <div className='h-full flex gap-2'>
             {/* main menu */}
             <div className='h-full w-[var(--w-main-menu)] px-2 overflow-hidden rounded-lg flex flex-col items-center gap-2'>
-                <div className='size-[calc(var(--w-main-menu)-10px)] text-center py-3 border bg-blue-500 text-white text-sm rounded-lg shadow-md grid place-items-center'>
+                <div className='size-[calc(var(--w-main-menu)-10px)] text-center py-3 border bg-gray-500 text-white text-sm rounded-lg shadow-md grid place-items-center'>
                     <BedDouble className='h-5 w-5' />
                 </div>
 
@@ -94,7 +94,7 @@ const SidebarNav = () => {
             </div>
 
             {/* sub menu */}
-            <div className='w-[var(--w-sub-menu)] p-4 flex flex-col gap-4 overflow-y-auto bg-white shadow-sm rounded-lg'>
+            <div className='w-[var(--w-sub-menu)] p-4 flex flex-col gap-4 overflow-y-auto bg-white shadow-sm rounded-l-[10px] border-r border-gray-100'>
                 {
                     activeMenu && activeMenu.items && activeMenu.items.map((subMenu, i) => (
                         <div

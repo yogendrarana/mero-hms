@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 
 // css
 import "@merohms/styles/css/globals.css";
