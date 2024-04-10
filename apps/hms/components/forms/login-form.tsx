@@ -30,7 +30,7 @@ const LoginForm = () => {
                 <input type={showPassword ? "text" : "password"} name="password" placeholder='password' className='w-full py-2' />
                 <button type='button' className='cursor-pointer text-gray-300' onClick={() => setShowPassword(!showPassword)}>
                     {
-                        showPassword ? <EyeOff size={20} /> : <Eye size={20} />
+                        showPassword ? <EyeOff size={18} /> : <Eye size={18} />
                     }
                 </button>
             </label>

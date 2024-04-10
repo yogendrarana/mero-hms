@@ -32,7 +32,7 @@ const SidebarNav = () => {
         <div className='h-full flex gap-2'>
             {/* main menu */}
             <div className='h-full w-[var(--w-main-menu)] px-2 overflow-hidden rounded-lg flex flex-col items-center gap-2'>
-                <div className='size-[calc(var(--w-main-menu)-10px)] text-center py-3 border bg-gray-500 text-white text-sm rounded-lg shadow-md grid place-items-center'>
+                <div className='size-[calc(var(--w-main-menu)-10px)] text-center py-3 border bg-blue-500 text-white text-sm rounded-lg grid place-items-center'>
                     <BedDouble className='h-5 w-5' />
                 </div>
 
