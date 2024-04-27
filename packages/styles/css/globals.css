@@ -21,6 +21,9 @@ input:focus{
 }
 
 :root {
+    /* height */
+    --section-header-height: 50px;
+
     /* width */
     --w-main-menu: 60px;
     --w-sub-menu: 280px;
