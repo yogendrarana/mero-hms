@@ -2,6 +2,7 @@ import { ReactNode } from 'react'
 
 // components
 import SidebarNav from '../nav/sidebar-nav'
+import Topbar from '../../app/_components/topbar';
 
 // props type
 type PropType = {
@@ -10,10 +11,15 @@ type PropType = {
 
 const DashboardLayout = ({ children }: PropType) => {
     return (
-        <div className="h-full flex p-3 bg-gray-100">
+        <div className="h-full flex">
             <SidebarNav />
-            <div className="h-full w-full p-4 bg-white shadow-sm rounded-r-[10px]">
-                {children}
+            <div className="h-full w-full bg-white shadow-sm rounded-r-[10px] flex flex-col">
+                <div className='h-[var(--height-topbar)] px-4 border-b'>
+                    <Topbar />
+                </div>
+                <div className='p-4'>
+                    {children}
+                </div>
             </div>
         </div>
     )

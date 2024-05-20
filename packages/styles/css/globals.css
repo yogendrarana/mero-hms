@@ -23,8 +23,9 @@ input:focus{
 :root {
     /* height */
     --section-header-height: 50px;
+    --height-topbar: 65px;
 
     /* width */
-    --w-main-menu: 60px;
+    --w-main-menu: 80px;
     --w-sub-menu: 280px;
 }
