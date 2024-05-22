@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
+import { BarChart, LaptopMinimal, PaintBucket, Smartphone, Store } from 'lucide-react';
 
 // icons
 import { BedDouble, Settings, User } from 'lucide-react';
@@ -46,14 +47,19 @@ const SidebarNav = () => {
                                 onClick={() => router.push(menu.href)}
                                 className={`
                                     size-[50px] grid place-items-center cursor-pointer rounded-lg
-                                    hover:border transition duration-300
-                                    ${pathname.split("/")[1] === menu.root_href ? "border" : ""}
+                                    hover:bg-gray-100 transition duration-300
+                                    ${pathname.split("/")[1] === menu.root_href ? "bg-gray-100" : ""}
                                 `}
                             >
                                 <TooltipProvider delayDuration={100}>
                                     <Tooltip>
                                         <TooltipTrigger className='h-full w-full grid place-items-center'>
-                                            <Image src={menu.icon} alt={menu.title} width={20} height={20} />
+                                            {/* <Image src={menu.icon} alt={menu.title} width={20} height={20} /> */}
+                                            {menu.title === "Analytics" ? <BarChart size={16} className="text-black" /> : null}
+                                            {menu.title === "Front Office" ? <LaptopMinimal size={16} className="text-black" /> : null}
+                                            {menu.title === "Point of Sale" ? <Smartphone size={16} className="text-black" /> : null}
+                                            {menu.title === "House Keeping" ? <PaintBucket size={16} className="text-black" /> : null}
+                                            {menu.title === "Inventory" ? <Store size={16} className="text-black" /> : null}
                                         </TooltipTrigger>
                                         <TooltipContent side='right' className='bg-white text-black border shadow-sm'>
                                             <p className='text-sm'>{menu.title}</p>
