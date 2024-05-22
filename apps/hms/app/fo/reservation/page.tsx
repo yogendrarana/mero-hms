@@ -2,7 +2,7 @@ import React from 'react'
 
 const Reservation = () => {
   return (
-    <div className='h-[var(--section-header-height)]'>
+    <div className=''>
       Reservation
     </div>
   )

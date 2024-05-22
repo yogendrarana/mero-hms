@@ -2,7 +2,7 @@ import React from 'react'
 
 const Revenue = () => {
   return (
-    <div className=''>Revenue</div>
+    <div className='h-full'>Revenue</div>
   )
 }
 

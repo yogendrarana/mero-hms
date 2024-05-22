@@ -13,11 +13,11 @@ const DashboardLayout = ({ children }: PropType) => {
     return (
         <div className="h-full flex">
             <SidebarNav />
-            <div className="h-full w-full bg-white shadow-sm rounded-r-[10px] flex flex-col">
+            <div className="h-full w-full shadow-sm rounded-r-[10px] flex flex-col">
                 <div className='h-[var(--height-topbar)] px-4 border-b'>
                     <Topbar />
                 </div>
-                <div className='p-4'>
+                <div className='h-[calc(100vh-var(--height-topbar))] p-4'>
                     {children}
                 </div>
             </div>
