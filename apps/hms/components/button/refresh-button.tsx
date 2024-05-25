@@ -7,7 +7,7 @@ import { RotateCcw } from 'lucide-react'
 const RefreshButton = () => {
     return (
         <Button
-        size={'icon'}
+            size="icon"
             onClick={() => window.location.reload()}
             className="size-[var(--size-button)] flex items-center justify-center border rounded-md cursor-pointer bg-white hover:bg-gray-100"
         >

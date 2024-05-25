@@ -26,6 +26,7 @@ input:focus{
     --height-topbar: 65px;
     --height-header: 50px;
     --height-button: 40px;
+    --height-clickable: 35px;
 
     /* size */
     --size-button: 40px;

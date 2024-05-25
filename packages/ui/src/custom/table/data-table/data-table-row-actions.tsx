@@ -5,18 +5,12 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuRadioGroup,
-  DropdownMenuRadioItem,
   DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@merohms/ui"
+} from "../../../components/dropdown-menu"
 
+import { Button } from "../../../components/button"
 import { Row } from "@tanstack/react-table"
-import { Button, Separator } from "@merohms/ui"
 import { DotsHorizontalIcon } from "@radix-ui/react-icons"
 
 interface DataTableRowActionsProps<TData> {
@@ -37,9 +31,6 @@ export function DataTableRowActions<TData>({ row }: DataTableRowActionsProps<TDa
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-[160px] p-3 bg-white space-y-3">
         <DropdownMenuItem>Edit</DropdownMenuItem>
-        <DropdownMenuItem>Make a copy</DropdownMenuItem>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem>Favorite</DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem>Delete</DropdownMenuItem>
       </DropdownMenuContent>

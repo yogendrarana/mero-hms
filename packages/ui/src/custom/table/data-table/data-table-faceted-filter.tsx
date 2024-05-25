@@ -1,10 +1,11 @@
 import * as React from "react"
-import { CheckIcon, PlusCircledIcon } from "@radix-ui/react-icons"
+import { CheckIcon } from "@radix-ui/react-icons"
+import { CirclePlus } from "lucide-react"
 import { Column } from "@tanstack/react-table"
 
 import { cn } from "@merohms/lib"
-import { Badge } from "@merohms/ui"
-import { Button } from "@merohms/ui"
+import { Badge } from "../../../components/badge"
+import { Button } from "../../../components/button"
 import {
   Command,
   CommandEmpty,
@@ -13,13 +14,13 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "@merohms/ui"
+} from "../../../components/command"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@merohms/ui"
-import { Separator } from "@merohms/ui"
+} from "../../../components/popover"
+import { Separator } from "../../../components/separator"
 
 interface DataTableFacetedFilterProps<TData, TValue> {
   column?: Column<TData, TValue>
@@ -42,23 +43,21 @@ export function DataTableFacetedFilter<TData, TValue>({
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <Button variant="outline" size="sm" className="h-8 border-dashed">
-          <PlusCircledIcon className="mr-2 h-4 w-4" />
+        <Button
+          variant="outline"
+          size="icon"
+          className="h-[--height-clickable] px-3 flex gap-2 items-center rounded-md cursor-pointer hover:bg-gray-100"
+        >
+          <CirclePlus className="mr-2 h-4 w-4" />
           {title}
           {selectedValues?.size > 0 && (
             <>
               <Separator orientation="vertical" className="mx-2 h-4" />
-              <Badge
-                variant="secondary"
-                className="rounded-sm px-1 font-normal lg:hidden"
-              >
-                {selectedValues.size}
-              </Badge>
-              <div className="hidden space-x-1 lg:flex">
+              <div className="space-x-1 flex gap-1">
                 {selectedValues.size > 2 ? (
                   <Badge
                     variant="secondary"
-                    className="rounded-sm px-1 font-normal"
+                    className="rounded-md font-normal bg-gray-100"
                   >
                     {selectedValues.size} selected
                   </Badge>
@@ -69,7 +68,7 @@ export function DataTableFacetedFilter<TData, TValue>({
                       <Badge
                         variant="secondary"
                         key={option.value}
-                        className="rounded-sm px-1 font-normal"
+                        className="rounded-md font-normal bg-gray-100"
                       >
                         {option.label}
                       </Badge>
@@ -80,9 +79,9 @@ export function DataTableFacetedFilter<TData, TValue>({
           )}
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-[200px] p-0" align="start">
+      <PopoverContent className="w-[200px] p-1 bg-white" align="start">
         <Command>
-          <CommandInput placeholder={title} />
+          <CommandInput placeholder={title} className="p-2" />
           <CommandList>
             <CommandEmpty>No results found.</CommandEmpty>
             <CommandGroup>
@@ -102,16 +101,15 @@ export function DataTableFacetedFilter<TData, TValue>({
                         filterValues.length ? filterValues : undefined
                       )
                     }}
+                    className="p-1"
                   >
                     <div
                       className={cn(
-                        "mr-2 flex h-4 w-4 items-center justify-center rounded-sm border border-primary",
-                        isSelected
-                          ? "bg-primary text-primary-foreground"
-                          : "opacity-50 [&_svg]:invisible"
+                        "mr-2 flex h-4 w-4 items-center justify-center rounded-md border cursor-pointer",
+                        isSelected ? "bg-black text-white" : "opacity-0 [&_svg]:invisible"
                       )}
                     >
-                      <CheckIcon className={cn("h-4 w-4")} />
+                      {isSelected && <CheckIcon className={cn("h-4 w-4")} />}
                     </div>
                     {option.icon && (
                       <option.icon className="mr-2 h-4 w-4 text-muted-foreground" />

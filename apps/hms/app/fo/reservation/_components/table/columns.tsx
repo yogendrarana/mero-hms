@@ -1,13 +1,23 @@
 "use client"
 
+import { z } from "zod"
 import React from "react"
-import { Task } from "./schema"
 import { Badge } from "@merohms/ui"
 import { Checkbox } from "@merohms/ui"
 import { ColumnDef } from "@tanstack/react-table"
 import { labels, priorities, statuses } from "./data"
-import { DataTableRowActions } from "./data-table-row-actions"
+import { DataTableRowActions } from "@merohms/ui"
 import { DataTableColumnHeader } from "@merohms/ui"
+
+export const taskSchema = z.object({
+    id: z.string(),
+    title: z.string(),
+    status: z.string(),
+    label: z.string(),
+    priority: z.string(),
+})
+
+export type Task = z.infer<typeof taskSchema>
 
 export const columns: ColumnDef<Task>[] = [
     {
@@ -20,7 +30,7 @@ export const columns: ColumnDef<Task>[] = [
                 }
                 onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
                 aria-label="Select all"
-                className="translate-y-[2px] -ml-4 border-gray-300"
+                className="translate-y-[2px] -ml-4 border-gray-300 rounded-md"
             />
         ),
         cell: ({ row }) => (
@@ -28,7 +38,7 @@ export const columns: ColumnDef<Task>[] = [
                 checked={row.getIsSelected()}
                 onCheckedChange={(value) => row.toggleSelected(!!value)}
                 aria-label="Select row"
-                className="translate-y-[2px] border-gray-300"
+                className="translate-y-[2px] border-gray-300 rounded-md"
             />
         ),
         enableSorting: false,
