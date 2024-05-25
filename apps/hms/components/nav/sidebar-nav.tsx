@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
-import { BarChart, LaptopMinimal, PaintBucket, Smartphone, Store } from 'lucide-react';
+import { BarChart, LaptopMinimal, Menu, PaintBucket, Smartphone, Store } from 'lucide-react';
 
 // icons
 import { BedDouble, Settings, User } from 'lucide-react';
@@ -72,32 +72,10 @@ const SidebarNav = () => {
                 </div>
 
                 <div className='mt-auto py-4 flex flex-col gap-4'>
-                    <TooltipProvider delayDuration={100}>
-                        <Tooltip>
-                            <TooltipTrigger asChild>
-                                <Link
-                                    href="#"
-                                    className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
-                                >
-                                    <User className="h-5 w-5" />
-                                    <span className="sr-only">Account</span>
-                                </Link>
-                            </TooltipTrigger>
-                            <TooltipContent className='text-sm bg-white text-black border' side="right">Account</TooltipContent>
-                        </Tooltip>
-                    </TooltipProvider>
-
-                    <TooltipProvider delayDuration={100}>
-                        <Tooltip>
-                            <TooltipTrigger asChild>
-                                <p className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8">
-                                    <Settings className="h-5 w-5" />
-                                    <span className="sr-only">Settings</span>
-                                </p>
-                            </TooltipTrigger>
-                            <TooltipContent className='text-sm bg-white text-black border' side="right">Settings</TooltipContent>
-                        </Tooltip>
-                    </TooltipProvider>
+                    <div className="size-[50px] grid place-items-center cursor-pointer rounded-lg hover:bg-gray-100 transition duration-300">
+                        <Menu className="h-5 w-5" />
+                        <span className="sr-only">Settings</span>
+                    </div>
                 </div>
             </div>
 

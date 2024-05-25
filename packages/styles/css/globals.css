@@ -24,6 +24,11 @@ input:focus{
     /* height */
     --section-header-height: 50px;
     --height-topbar: 65px;
+    --height-header: 50px;
+    --height-button: 40px;
+
+    /* size */
+    --size-button: 40px;
 
     /* width */
     --w-main-menu: 80px;

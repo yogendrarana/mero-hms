@@ -20,7 +20,7 @@ const SettingDropdown = () => {
     return (
         <DropdownMenu open={open} onOpenChange={setOpen}>
             <DropdownMenuTrigger asChild>
-                <div className="px-3 py-2 flex gap-2 items-center border rounded-md cursor-pointer">
+                <div className="size-[var(--size-button)] flex items-center justify-center border rounded-md cursor-pointer hover:bg-gray-100">
                     <Settings size={16} />
                 </div>
             </DropdownMenuTrigger>

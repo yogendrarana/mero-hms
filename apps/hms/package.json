@@ -10,6 +10,10 @@
   },
   "dependencies": {
     "@merohms/ui": "*",
+    "@merohms/eslint-config": "*",
+    "@merohms/styles": "*",
+    "@merohms/typescript-config": "*",
+    "@radix-ui/react-icons": "^1.3.0",
     "lucide-react": "^0.363.0",
     "next": "14.1.4",
     "react": "^18",
@@ -17,9 +21,6 @@
     "zustand": "^4.5.2"
   },
   "devDependencies": {
-    "@merohms/eslint-config": "*",
-    "@merohms/styles": "*",
-    "@merohms/typescript-config": "*",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

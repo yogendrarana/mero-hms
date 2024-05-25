@@ -21,7 +21,7 @@ const NotificationDropdown = () => {
     return (
         <DropdownMenu open={open} onOpenChange={setOpen}>
             <DropdownMenuTrigger asChild>
-                <div className="px-3 py-2 flex gap-2 items-center border rounded-md cursor-pointer">
+                <div className="size-[var(--size-button)] hover:bg-gray-100 flex items-center justify-center border rounded-md cursor-pointer">
                     <Bell size={16} />
                 </div>
             </DropdownMenuTrigger>

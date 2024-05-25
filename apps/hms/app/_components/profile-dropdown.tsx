@@ -19,7 +19,7 @@ const ProfileDropdown = () => {
     return (
         <DropdownMenu open={open} onOpenChange={setOpen}>
             <DropdownMenuTrigger asChild>
-                <div className="px-3 py-2 flex gap-2 items-center border rounded-md cursor-pointer">
+                <div className="h-[--height-button] px-3 flex gap-2 items-center border rounded-md cursor-pointer hover:bg-gray-100">
                     <User size={16} />
                     <Button variant="ghost" className="p-0">Yogendra</Button>
                 </div>
