@@ -1,0 +1,10 @@
+{
+  "name": "@merohms/config",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3"
+  }
+}

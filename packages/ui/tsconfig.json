@@ -1,5 +1,5 @@
 {
-  "extends": "@merohms/typescript-config/react-library.json",
+  "extends": "@merohms/config/typescript/base.json",
   "compilerOptions": {
     "outDir": "dist"
   },

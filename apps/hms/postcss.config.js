@@ -1,1 +1,5 @@
-module.exports = require("@merohms/styles/tailwind/postcss.config.js");
+const { postcssConfig } = require('@merohms/config')
+
+module.exports = {
+    ...postcssConfig,
+}

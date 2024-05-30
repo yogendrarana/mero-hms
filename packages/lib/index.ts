@@ -1,1 +1,1 @@
-export { default as cn } from "./src/cn" 
+export { default as cn } from "./cn/cn" 

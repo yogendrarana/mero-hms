@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 // css
-import "@merohms/styles/css/globals.css";
+import "../style/index.css";
 
 // metadata
 export const metadata: Metadata = {

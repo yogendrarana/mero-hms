@@ -1,5 +1,5 @@
 {
-  "extends": "@merohms/typescript-config/nextjs.json",
+  "extends": "@merohms/config/typescript/nextjs.json",
   "compilerOptions": {
     "plugins": [
       {
@@ -13,6 +13,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "../../packages/ui/src/custom/table/seed.ts", "../../packages/ui/src/custom/table/schema.ts", "../../packages/ui/src/custom/table/data-table/data/data.tsx", "../../packages/ui/src/custom/table/data-table/data-table-view-options.tsx", "../../packages/ui/src/custom/table/data-table/data-table-toolbar.tsx", "../../packages/ui/src/custom/table/data-table/data-table-faceted-filter.tsx"  ],
-  "exclude": ["node_modules"]
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
