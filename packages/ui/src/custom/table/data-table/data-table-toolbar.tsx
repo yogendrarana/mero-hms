@@ -1,5 +1,7 @@
 "use client"
 
+import * as React from "react"
+
 import { Table } from "@tanstack/react-table"
 import { Cross2Icon } from "@radix-ui/react-icons"
 

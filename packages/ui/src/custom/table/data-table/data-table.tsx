@@ -3,21 +3,9 @@
 import * as React from "react"
 import {
   ColumnDef,
-  ColumnFiltersState,
-  SortingState,
   Table as TableType,
-  VisibilityState,
   flexRender,
-  getCoreRowModel,
-  getFacetedRowModel,
-  getFacetedUniqueValues,
-  getFilteredRowModel,
-  getPaginationRowModel,
-  getSortedRowModel,
-  useReactTable,
 } from "@tanstack/react-table"
-
-
 
 import {
   Table,
@@ -29,8 +17,8 @@ import {
 } from "../../../components/table"
 
 interface DataTableProps<TData, TValue> {
-  columns: ColumnDef<TData, TValue>[],
-  table: TableType<TData>
+  table: TableType<TData>,
+  columns: ColumnDef<TData, TValue>[]
 }
 
 export function DataTable<TData, TValue>({

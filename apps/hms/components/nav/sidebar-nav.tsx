@@ -1,13 +1,11 @@
 "use client"
 
-import Link from 'next/link';
-import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import { BarChart, LaptopMinimal, Menu, PaintBucket, Smartphone, Store } from 'lucide-react';
 
 // icons
-import { BedDouble, Settings, User } from 'lucide-react';
+import { BedDouble } from 'lucide-react';
 
 // links
 import { appLinks } from '../../config/app-links';
@@ -30,7 +28,7 @@ const SidebarNav = () => {
     }, [pathname])
 
     return (
-        <div className='h-full flex'>
+        <aside className='h-full flex'>
             {/* main menu */}
             <div className='h-full w-[var(--w-main-menu)] overflow-hidden rounded-lg flex flex-col items-center gap-2'>
                 <div className='h-[var(--height-topbar)] flex items-center'>
@@ -96,7 +94,7 @@ const SidebarNav = () => {
                     ))
                 }
             </div>
-        </div>
+        </aside>
     )
 }
 

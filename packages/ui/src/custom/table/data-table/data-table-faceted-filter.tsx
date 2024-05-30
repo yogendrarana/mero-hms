@@ -1,11 +1,9 @@
 import * as React from "react"
-import { CheckIcon } from "@radix-ui/react-icons"
+import { cn } from "@merohms/lib"
 import { CirclePlus } from "lucide-react"
 import { Column } from "@tanstack/react-table"
+import { CheckIcon } from "@radix-ui/react-icons"
 
-import { cn } from "@merohms/lib"
-import { Badge } from "../../../components/badge"
-import { Button } from "../../../components/button"
 import {
   Command,
   CommandEmpty,
@@ -20,6 +18,8 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "../../../components/popover"
+import { Badge } from "../../../components/badge"
+import { Button } from "../../../components/button"
 import { Separator } from "../../../components/separator"
 
 interface DataTableFacetedFilterProps<TData, TValue> {
@@ -45,8 +45,7 @@ export function DataTableFacetedFilter<TData, TValue>({
       <PopoverTrigger asChild>
         <Button
           variant="outline"
-          size="icon"
-          className="h-[--height-clickable] px-3 flex gap-2 items-center rounded-md cursor-pointer hover:bg-gray-100"
+          className="h-[var(--height-clickable)] flex gap-1 border-dashed items-center rounded-md cursor-pointer hover:bg-gray-100"
         >
           <CirclePlus className="mr-2 h-4 w-4" />
           {title}
@@ -56,7 +55,7 @@ export function DataTableFacetedFilter<TData, TValue>({
               <div className="space-x-1 flex gap-1">
                 {selectedValues.size > 2 ? (
                   <Badge
-                    variant="secondary"
+                    variant="destructive"
                     className="rounded-md font-normal bg-gray-100"
                   >
                     {selectedValues.size} selected

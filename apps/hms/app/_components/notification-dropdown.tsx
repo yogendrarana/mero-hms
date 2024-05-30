@@ -37,7 +37,7 @@ const NotificationDropdown = () => {
                             <Button
                                 variant="ghost"
                                 size="icon"
-                                className="p-2 bg-gray-100"
+                                className="p-2 hover:bg-gray-100"
                                 onClick={() => setOpen(false)}
                             >
                                 <X size={16} />

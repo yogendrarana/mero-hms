@@ -1,3 +1,4 @@
+"use client"
 
 import {
   Select,
@@ -6,6 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../../../components/select"
+import * as React from "react"
 import { Table } from "@tanstack/react-table"
 import { Button } from "../../../components/button"
 import { ChevronsRight, ChevronsLeft, ChevronLeft, ChevronRight } from 'lucide-react';
