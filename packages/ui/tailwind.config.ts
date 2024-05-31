@@ -1,7 +1,7 @@
-const base = require("@merohms/config/tailwind/tailwind.config")
+const { tailwindConfig } = require("@merohms/config")
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  ...base,
-  content: ["./src/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
+  ...tailwindConfig,
+  content: ["./components/**/*.{js,jsx,ts,tsx}", "./custom/**/*.{js,jsx,ts,tsx}"],
 }
