@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+input {
+    outline: none;
+}
+
+input:focus{
+    outline: none;
+}
+
+:root {
+    /* height */
+    --section-header-height: 50px;
+    --height-topbar: 65px;
+    --height-header: 50px;
+    --height-button: 40px;
+    --height-clickable: 35px;
+
+    /* size */
+    --size-button: 40px;
+
+    /* width */
+    --w-main-menu: 80px;
+    --w-sub-menu: 280px;
+}

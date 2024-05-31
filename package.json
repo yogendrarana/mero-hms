@@ -18,7 +18,6 @@
   },
   "devDependencies": {
     "@merohms/eslint-config": "*",
-    "@merohms/typescript-config": "*",
     "prettier": "^3.2.5",
     "turbo": "latest"
   },
